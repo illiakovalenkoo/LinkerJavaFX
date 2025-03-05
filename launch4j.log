@@ -1,0 +1,89 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\glekb\IdeaProjects\projectJavaFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.017.000_000
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-23\bin
+Check launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe (OK)
+Version string: 1.023.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe
+Launcher args:	--module-path "C:\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -jar "C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe"
+Args length:	142/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\glekb\IdeaProjects\projectJavaFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.017.000_000
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-23\bin
+Check launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe (OK)
+Version string: 1.023.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe
+Launcher args:	--module-path "C:\Program Files\Java\jdk-23\lib" --add-modules javafx.controls,javafx.fxml -jar "C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe"
+Args length:	150/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\glekb\IdeaProjects\projectJavaFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.017.000_000
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-23\bin
+Check launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe (OK)
+Version string: 1.023.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe
+Launcher args:	--module-path "C:\Program Files\Java\jdk-23\lib" --add-modules javafx.controls,javafx.fxml -jar "C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe"
+Args length:	150/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\glekb\IdeaProjects\projectJavaFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.017.000_000
+Java max ver:	
+JRE paths:	 C:\Program Files\Java\jdk-23
+Check launcher:	C:\Users\glekb\IdeaProjects\projectJavaFX\ C:\Program Files\Java\jdk-23\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Version string: 1.008.000 / 64-Bit (Ignore)
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_441
+Version string: 1.008.000_441 / 64-Bit (Ignore)
+Ignore:		1.008.000_441
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\23.0.2
+Version string: 1.023.000_002 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe (OK)
+Match:		1.023.000_002
+Runtime used:	1.023.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe
+Launcher args:	--module-path C:\Users\glekb\Downloads\openjfx-23.0.2_windows-x64_bin-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml -jar "C:\Users\glekb\IdeaProjects\projectJavaFX\Linker.exe"
+Args length:	197/32768 chars
+Exit code:	0

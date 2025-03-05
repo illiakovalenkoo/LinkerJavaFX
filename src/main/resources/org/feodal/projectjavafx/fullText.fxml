@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" style="-fx-background-color: #343434;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.feodal.projectjavafx.controllers.FullTextController">
+    <children>
+        <Label alignment="CENTER" layoutX="6.0" layoutY="6.0" style="-fx-background-color: #0b003d;" text="Detailed Information" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+      <Label layoutX="31.0" layoutY="62.0" prefHeight="40.0" prefWidth="99.0" text="Full link text:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="125.0" prefHeight="40.0" prefWidth="112.0" text="Short link text:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="delete_btn" layoutX="403.0" layoutY="185.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="back_btn" layoutX="106.0" layoutY="185.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Back" textFill="WHITE" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="full_text" editable="false" focusTraversable="false" layoutX="134.0" layoutY="65.0" prefHeight="34.0" prefWidth="448.0" stylesheets="@../../../styles/main.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="short_text" editable="false" focusTraversable="false" layoutX="150.0" layoutY="128.0" prefHeight="34.0" prefWidth="432.0" stylesheets="@../../../styles/main.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>
