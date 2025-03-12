@@ -1,116 +1,138 @@
-# projectJavaFX - URL Shortener
+# Linker - JavaFX URL Shortener
 
-## 📖 Project Overview
-**projectJavaFX** is a JavaFX-based **URL Shortener** application that allows users to store and manage shortened links.  
-Users can enter a **long URL** and assign a **short name** to it. The program **stores the mapping in a database**  
-and allows users to access and manage their shortened links.
+**Linker** is a JavaFX-based application that allows users to store and manage shortened links. The application supports **database storage via MySQL** and provides a **modern UI with FXML and CSS**.
 
----
+## 1. How to Download and Run the Project
 
-## 🚀 Features
-✔ **Shorten long URLs** with custom names  
-✔ **Store links in a MySQL database**  
-✔ **Click on short links to open the original URL**  
-✔ **List all stored links in the database**  
-✔ **Modern JavaFX-based UI**  
-✔ **Images folder with test screenshots**  
+### **Prerequisites**
 
----
+To run this project, you need to have:
 
-## 🛠 How It Works
-1. **Enter a long URL** (e.g., `https://example.com/very-long-url`).
-2. **Enter a short name** (e.g., `my-short-link`).
-3. **The link is stored in the database** and appears in the list.
-4. **Click on a short link** to open the original URL in a browser.
+- **Java Development Kit (JDK) 23+** installed. Download from [Adoptium JDK](https://adoptium.net/) or use OpenJDK.
+- **JavaFX SDK 23** installed. Download from [Gluon JavaFX](https://gluonhq.com/products/javafx/) or [OpenJFX](https://openjfx.io/).
+- **MySQL Database** installed. You can use [MAMP](https://www.mamp.info/en/) for an easy setup on macOS or Windows.
 
-**Example:**
-- Input:  
-  - **Long URL:** `https://example.com/some-really-long-address`
-  - **Short Name:** `example-short`
-- Output:  
-  - The user can now access the long URL via:  
-    `http://localhost:8080/example-short`
+### **Setting Up the MySQL Database with MAMP**
 
----
+1. **Install MAMP**:
 
-## 📦 System Requirements
+   - Download and install MAMP from the [official website](https://www.mamp.info/en/).
 
-### **1️⃣ Java Development Kit (JDK)**
-- Download **JDK 23+**: [Adoptium JDK](https://adoptium.net/)  
-- Verify installation:
+2. **Start MAMP**:
+
+   - Open the MAMP application and click on "Start Servers".
+
+3. **Access phpMyAdmin**:
+
+   - Click on "Open WebStart page" in MAMP.
+   - Navigate to the "Tools" section and select "phpMyAdmin".
+
+4. **Create a New Database**:
+
+   - In phpMyAdmin, go to the "Databases" tab.
+   - Enter a name for your database (e.g., `linker_db`) and click "Create".
+
+5. **Create the Necessary Tables**:
+
+   - Select the newly created database.
+   - Go to the "SQL" tab and execute the following SQL statements to create the required tables:
+
+     ```sql
+     CREATE TABLE links (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         short_name VARCHAR(50) NOT NULL UNIQUE,
+         long_url TEXT NOT NULL
+     );
+     ```
+
+### **Clone the Repository**
+
+1. **Download the repository**:
+
+   ```sh
+   git clone https://github.com/illiakovalenkoo/LinkerJavaFX.git
+   cd LinkerJavaFX
+   ```
+
+### **Configure the Application**
+
+1. **Set Database Connection Properties**:
+
+   - Locate the configuration file (e.g., `config.properties`) in the `src/linker` directory.
+   - Update the database connection properties to match your MySQL setup:
+
+     ```properties
+     db.url=jdbc:mysql://localhost:3306/linker_db
+     db.username=root
+     db.password=root
+     ```
+
+### **Run the Application**
+
+- **Option 1: Using the `.jar` file**:
+
   ```sh
-  java -version
+  java -jar linker.jar
   ```
 
-### **2️⃣ JavaFX SDK**
-- Download **JavaFX 23 SDK**: [Gluon JavaFX](https://gluonhq.com/products/javafx/)  
-- Extract and set up JavaFX libraries.
+  If JavaFX is missing, use:
 
-### **3️⃣ MySQL Database**
-- Install **MySQL Server 8+**: [Download MySQL](https://dev.mysql.com/downloads/)
-- Create the database using:
-  ```sql
-  CREATE DATABASE shortener_db;
+  ```sh
+  java --module-path "path_to_javafx_sdk/lib" --add-modules javafx.controls,javafx.fxml -jar "path_to_project/linker.jar"
   ```
 
----
+- **Option 2: Using an IDE**:
 
-## 📂 Images Folder
+  - Open the project in your preferred IDE (e.g., IntelliJ IDEA).
+  - Ensure that the JavaFX SDK is properly configured in your project settings.
+  - Run the `Main` class located in the `src/linker` directory.
 
-The project includes an **images/** folder containing UI test screenshots:
-- `img.png` – Main link shortening interface  
-- `img2.png` – Detailed information screen  
+## 2. First-Time Execution Issues
 
-These images help verify the UI and ensure smooth functionality.
+- **Java not installed** → Install **JDK 23+**.
+- **JavaFX not found** → Install JavaFX SDK and configure it in your environment.
+- **MySQL database not configured** → Ensure MySQL is running, and the database along with the necessary tables are created as described above.
 
----
+## 3. Project Structure
 
-## ⚙️ Configuration
+```
+LinkerJavaFX/                      # Root project directory
+│── src/                           # Source code of the application
+│── images/                        # Screenshots and images for documentation
+│── doc/                           # README.md file
+│── fxml/                          # UI layouts
+│   ├── main.fxml                  # Main application UI layout
+│   ├── settings.fxml               # Settings window layout
+│── css/                           # UI styling files
+│   ├── styles.css                 # Default styles
+│   ├── dark-theme.css             # Optional dark theme
+```
 
-1. Open `config.properties` (located in `src/main/resources/config.properties`).
-2. Modify database connection settings if needed:
-   ```properties
-   db.url=jdbc:mysql://localhost:3306/shortener_db
-   db.user=root
-   db.password=root
-   ```
-3. Save the file.
+## 4. Technologies Used
 
----
-
-## 💻 How to Run the Application
-
-### **Option 1: Running from IntelliJ IDEA**
-1. Open the project in **IntelliJ IDEA**.
-2. Ensure **JavaFX SDK and MySQL Connector JARs** are loaded in dependencies.
-3. Run the `HelloApplication` class.
-
-### **Option 2: Running as a JAR**
-1. **Build the project** using Maven:
-   ```sh
-   mvn clean package
-   ```
-2. **Run the JAR file**:
-   ```sh
-   java --module-path "C:\path	o\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -jar target/projectJavaFX.jar
-   ```
-
-### **Option 3: Running as an EXE (Windows)**
-1. Use **Launch4j** to generate an `.exe` file.
-2. Run `projectJavaFX.exe` located in the project directory.
-
----
-
-## 🛠 Built With
-- **Java 23**
+- **Java 23+**
 - **JavaFX 23**
-- **MySQL 8**
-- **Maven**
-- **Launch4j (for `.exe` creation)**
+- **MySQL** (via MAMP)
+- **FXML (UI Layouts)**
+- **CSS (UI Styling)**
+- **Maven** (for project management)
+- **JUnit** (for testing)
 
----
+## 5. Application Testing
 
-## 📜 License
-This project is licensed under the **MIT License** – feel free to use and modify it.  
+The application has been tested for:
 
-🚀 **Happy coding!**
+- **Shortening and storing URLs**
+- **Database integration with MySQL**
+- **Managing and opening short links**
+- **Graphical interface responsiveness**
+
+### `images/` Folder
+
+Screenshots and other images related to the application's UI and functionality are stored in the `images/` folder.
+
+## 6. License
+
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute this software with no restrictions. The software is provided "as is", without warranty of any kind.
+
+
