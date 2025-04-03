@@ -100,12 +100,6 @@ LinkerJavaFX/                      # Root project directory
 │── src/                           # Source code of the application
 │── images/                        # Screenshots and images for documentation
 │── doc/                           # README.md file
-│── fxml/                          # UI layouts
-│   ├── main.fxml                  # Main application UI layout
-│   ├── settings.fxml               # Settings window layout
-│── css/                           # UI styling files
-│   ├── styles.css                 # Default styles
-│   ├── dark-theme.css             # Optional dark theme
 ```
 
 ## 4. Technologies Used
