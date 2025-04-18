@@ -123,6 +123,9 @@ The application has been tested for:
 
 ### `images/` Folder
 
+img.png -
+img2.png - 
+
 Screenshots and other images related to the application's UI and functionality are stored in the `images/` folder.
 
 ## 6. License
