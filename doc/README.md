@@ -125,6 +125,7 @@ The application has been tested for:
 
 img.png -
 img2.png - 
+imp3.png
 
 Screenshots and other images related to the application's UI and functionality are stored in the `images/` folder.
 
